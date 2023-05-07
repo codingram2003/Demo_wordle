@@ -43,10 +43,12 @@ app.post('/api/login', (req,res) => {
     [userName, password],
     (err, result)=>{
         if (err){
-            res.send({err:err})
+            res.send({err:err});
+            console.log(err);
         }
         else if (result){
-            res.send(result)
+            res.send(result);
+            console.log(result);
         } else {
             res.send({message: "username/password is incorrect"})
         }
