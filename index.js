@@ -46,7 +46,7 @@ app.post('/api/login', (req,res) => {
             res.send({err:err});
             console.log(err);
         }
-        else if (result){
+        if (result.length > 0){
             res.send(result);
             console.log(result);
         } else {
